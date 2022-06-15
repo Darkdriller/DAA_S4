@@ -105,7 +105,6 @@ def calFit(model):
     Objmax=-float('inf')
     best_sol=Sol()#record the local best solution
     best_sol.obj=float('inf')
-    #计算目标函数
     for sol in model.sol_list:
         nodes_seq=sol.nodes_seq
         num_vehicle, vehicle_routes = splitRoutes(nodes_seq, model)
