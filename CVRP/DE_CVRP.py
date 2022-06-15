@@ -194,8 +194,8 @@ def run(filepath,iters,epochs=150, Cr=0.5,F=0.5, popsize=400, v_cap=80, opt_type
     history_best_obj = []
     e_time=[]
     for ep in range(epochs):
+        start=time.time()
         for i in range(popsize):
-            start=time.time()
             v1=random.randint(0,model.number_of_nodes-1)
             sol=model.sol_list[v1]
             mu_x=muSol(model,v1)
